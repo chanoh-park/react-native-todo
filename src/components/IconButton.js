@@ -28,7 +28,7 @@ IconButton.defaultProps = {
   onPressOut: () => {},
 };
 
-IconButton.PropTypes = {
+IconButton.propTypes = {
   type: PropTypes.oneOf(Object.values(images)).isRequired,
   onPressOut: PropTypes.func,
   id: PropTypes.string,
