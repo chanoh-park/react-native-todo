@@ -12,25 +12,25 @@ const Icon = styled.Image`
   margin: 10px;
 `;
 
-const IconButton = ({ type, onPressOut, id }) => {
-  const _onPressOut = () => {
-    onPressOut(id);
+const IconButton = ({ type, onPressIn, id }) => {
+  const _onPressIn = () => {
+    onPressIn(id);
   };
 
   return (
-    <TouchableOpacity onPressOut={_onPressOut}>
+    <TouchableOpacity onPressIn={_onPressIn}>
       <Icon source={type} />
     </TouchableOpacity>
   );
 };
 
 IconButton.defaultProps = {
-  onPressOut: () => {},
+  onPressIn: () => {},
 };
 
 IconButton.propTypes = {
   type: PropTypes.oneOf(Object.values(images)).isRequired,
-  onPressOut: PropTypes.func,
+  onPressIn: PropTypes.func,
   id: PropTypes.string,
   completed: PropTypes.bool,
 };
