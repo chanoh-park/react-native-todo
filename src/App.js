@@ -119,7 +119,7 @@ export default function App() {
     </ThemeProvider>
   ) : (
     <AppLoading
-      startAsyn={_loadTasks}
+      startAsync={_loadTasks}
       onFinish={() => setIsReady(true)}
       onError={console.error}
     />
